@@ -14,7 +14,11 @@ install:
 	gem install bundler
 	bundle install
 
+list-notebooks:
+    #ls *.ipynb | sed -e 's/\.ipynb$//'
 book:
+	#copy all colab files to lessons
+	cp *.ipynb content/lessons/
 	jupyter-book build ./
 
 runall:
