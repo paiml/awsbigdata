@@ -51,7 +51,9 @@
   - title: security
     url: /topics/security
     not_numbered: true
-
+  - title: AWS Big Data Test Prep Notes
+    url: /topics/big_data_test_prep_notes
+    not_numbered: true
 
 # Video Lesson
 - title: Lessons
