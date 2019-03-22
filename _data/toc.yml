@@ -43,6 +43,17 @@
 - header: AWS Big Data Speciality Certification Guide
 
 # Video Lesson
+- title: Topics
+  url: /topics/topics
+  not_numbered: true
+  expand_sections: true
+  sections:
+  - title: security
+    url: /topics/security
+    not_numbered: true
+
+
+# Video Lesson
 - title: Lessons
   url: /lessons/lessons
   not_numbered: true
