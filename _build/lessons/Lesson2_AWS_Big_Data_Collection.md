@@ -36,6 +36,128 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 
 ## Lesson 2.1 Determine the operational characteristics of the collection system
 
+### Data Ingestion Concepts
+
+#### Data Lakes
+
+**Central Repository** for all data at any scale
+
+![data_lake](https://user-images.githubusercontent.com/58792/49777724-8aef8300-fcb6-11e8-981e-96d14498a801.png)
+
+#### AWS Lake Formation
+
+* New Service Announced at Reinvent 2018
+* Build a secure lake in days...**not months**
+* Enforce security policies
+* Gain and manage insights
+
+![aws_lake](https://user-images.githubusercontent.com/58792/49777834-f9ccdc00-fcb6-11e8-84a0-7295a0c69a15.png)
+
+#### AWS Batch (BATCH)
+
+Example could be Financial Service Trade Analysis
+
+![financial_services_trade](https://user-images.githubusercontent.com/58792/49778503-64334b80-fcba-11e8-85e7-dcdbfe473cd9.png)
+
+#### Using AWS Batch for ML Jobs
+
+* *[Watch Video Lesson 11.6:  Use AWS Batch for ML Jobs](https://www.safaribooksonline.com/videos/essential-machine-learning/9780135261118/9780135261118-EMLA_01_11_06)*
+
+
+https://aws.amazon.com/batch/
+
+![alt text](https://d1.awsstatic.com/Test%20Images/Kate%20Test%20Images/Dilithium-Diagrams_Visual-Effects-Rendering.ad9c0479c3772c67953e96ef8ae76a5095373d81.png)
+
+
+Example submissions tool
+
+```python
+@cli.group()
+def run():
+    """Run AWS Batch"""
+
+@run.command("submit")
+@click.option("--queue", default="first-run-job-queue", help="Batch Queue")
+@click.option("--jobname", default="1", help="Name of Job")
+@click.option("--jobdef", default="test", help="Job Definition")
+@click.option("--cmd", default=["uname"], help="Container Override Commands")
+def submit(queue, jobname, jobdef, cmd):
+    """Submit a job"""
+
+    result = submit_job(
+        job_name=jobname,
+        job_queue=queue,
+        job_definition=jobdef,
+        command=cmd
+    )
+    click.echo("CLI:  Run Job Called")
+    return result
+```
+
+#### Lambda (EVENTS)
+
+
+* Serverless
+*   Used in most if not all ML Platforms
+ - DeepLense
+ - Sagemaker
+ - S3 Events
+
+
+
+#### Starting development with AWS Python Lambda development with Chalice
+
+* *[Watch Video Lesson 11.3:  Use AWS Lambda development with Chalice](https://www.safaribooksonline.com/videos/essential-machine-learning/9780135261118/9780135261118-EMLA_01_11_03)*
+
+
+
+***Demo on Sagemaker Terminal***
+
+https://github.com/aws/chalice
+
+*Hello World Example:*
+
+```python
+$ pip install chalice
+$ chalice new-project helloworld && cd helloworld
+$ cat app.py
+
+from chalice import Chalice
+
+app = Chalice(app_name="helloworld")
+
+@app.route("/")
+def index():
+    return {"hello": "world"}
+
+$ chalice deploy
+...
+https://endpoint/dev
+
+$ curl https://endpoint/api
+{"hello": "world"}
+```
+
+References:
+
+[Serverless Web Scraping Project](https://github.com/noahgift/web_scraping_python)
+
+#### [Demo] Deploying Hello World Lambda Function
+
+#### Using Step functions with AWS
+
+* *[Watch Video Lesson 11.5:  Use AWS Step Functions](https://www.safaribooksonline.com/videos/essential-machine-learning/9780135261118/9780135261118-EMLA_01_11_05)*
+
+https://aws.amazon.com/step-functions/
+
+![Step Functions](https://d1.awsstatic.com/product-marketing/Step%20Functions/AmazonCloudWatchUpdated4.a57e968b08739e170aa504feed8db3761de21e60.png)
+
+Example Project:
+
+https://github.com/noahgift/web_scraping_python
+
+[Demo] Step Function
+
 ## Lesson 2.2 Select a collection system that handles the frequency of data change and type of data being ingested
 
 ## Lesson 2.3 Identify the properties that need to be enforced by the collection system: order, data structure, metadata, etc.
@@ -43,6 +165,35 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 ## Lesson 2.4 Explain the durability and availability characteristics for the collection approach
 
 ## Lesson 2.5 Learn AWS Kinesis Streams
+
+#### Kinesis Ad Tech Pipeline
+
+![Ad Tech Pipeline](https://user-images.githubusercontent.com/58792/49441021-285c2b80-f77a-11e8-82e2-da9006dc4c6d.png)
+
+#### Kinesis IoT
+
+![Kinesis IoT](https://user-images.githubusercontent.com/58792/49441101-5e011480-f77a-11e8-9727-4f7706361a08.png)
+
+#### Kinesis (STREAMING)
+
+**Solves Three Key Problems**
+
+
+
+*   Time-series Analytics
+*   Real-time Dashboards
+*   Real-time Metrics
+
+
+
+##### Kinesis Analytics Workflow
+![Kinesis Analytics](https://user-images.githubusercontent.com/58792/49440264-02ce2280-f778-11e8-9d7e-149819e74807.png)
+
+#### Kinesis Real-Time Log Analytics Example
+
+![Real-Time Log Analytics](https://user-images.githubusercontent.com/58792/49440433-7cfea700-f778-11e8-8cd5-55999cb7713c.png)
+
+#### [Demo] Kinesis
 
 ## Lesson 2.6 Learn AWS Kinesis Firehose
 
