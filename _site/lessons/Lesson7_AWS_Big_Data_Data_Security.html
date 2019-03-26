@@ -39,9 +39,9 @@
   "headline":
     "Lesson 7 - AWS Big Data Data Security",
   "datePublished":
-    "2019-03-21T18:07:11-07:00",
+    "2019-03-22T15:59:06-07:00",
   "dateModified":
-    "2019-03-21T18:07:11-07:00",
+    "2019-03-22T15:59:06-07:00",
   "description":
     "",
   "author": {
@@ -483,6 +483,73 @@ initFunction(initQuery);
       
       <li class="c-sidebar__chapter">
         <a class="c-sidebar__entry "
+          href="/awsbigdata/topics/topics.html"
+        >
+          
+          Topics
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/topics/security.html"
+                >
+                  
+                  security
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/topics/big_data_test_prep_notes.html"
+                >
+                  
+                  AWS Big Data Test Prep Notes
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
           href="/awsbigdata/lessons/lessons.html"
         >
           
@@ -692,33 +759,14 @@ initFunction(initQuery);
       <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
       <ul class="toc__menu">
   <li><a href="#pragmatic-ai-labs">Pragmatic AI Labs</a></li>
-  <li><a href="#41-identify-the-appropriate-data-processing-technology-for-a-given-scenario">4.1 Identify the appropriate data processing technology for a given scenario</a>
-    <ul>
-      <li><a href="#big-data-processing-technologies">Big Data Processing Technologies</a></li>
-      <li><a href="#real-world-data-engineering">Real World Data Engineering</a></li>
-    </ul>
-  </li>
-  <li><a href="#42-determine-how-to-design-and-architect-the-data-processing-solution">4.2 Determine how to design and architect the data processing solution</a>
-    <ul>
-      <li><a href="#overview">Overview</a></li>
-    </ul>
-  </li>
-  <li><a href="#43-determine-the-operational-characteristics-of-the-solution-implemented">4.3 Determine the operational characteristics of the solution implemented</a></li>
-  <li><a href="#44-understand-overview-of-aws-processing">4.4 Understand Overview of AWS Processing</a>
-    <ul>
-      <li><a href="#overview-1">Overview</a></li>
-    </ul>
-  </li>
-  <li><a href="#45-understand-elastic-mapreduce-emr">4.5 Understand Elastic MapReduce (EMR)</a></li>
-  <li><a href="#46-learn-about-apache-hadoop---intro">4.6 Learn about Apache Hadoop - Intro</a></li>
-  <li><a href="#47-apply-emr---architecture">4.7 Apply EMR - Architecture</a></li>
-  <li><a href="#48-understand-emr---operations">4.8 Understand EMR - Operations</a></li>
-  <li><a href="#49-use-emr---hive">4.9 Use EMR - Hive</a></li>
-  <li><a href="#410-use-emr---hbase">4.10 Use EMR - Hbase</a></li>
-  <li><a href="#411-use-emr---presto">4.11 Use EMR - Presto</a></li>
-  <li><a href="#412-use-emr---spark">4.12 Use EMR - Spark</a></li>
-  <li><a href="#413-implement-emr---storage--compression">4.13 Implement EMR - Storage &amp; Compression</a></li>
-  <li><a href="#414-implement-emr---lambda">4.14 Implement EMR - Lambda</a></li>
+  <li><a href="#aws-shared-responsibility-model">AWS Shared Responsibility Model</a></li>
+  <li><a href="#model-variations">Model Variations</a></li>
+  <li><a href="#infrastruture-model">Infrastruture Model</a></li>
+  <li><a href="#infrastructure-model">Infrastructure Model</a></li>
+  <li><a href="#container-model">Container Model</a></li>
+  <li><a href="#container-model-1">Container Model</a></li>
+  <li><a href="#abstract-model">Abstract Model</a></li>
+  <li><a href="#abstract-model-1">Abstract Model</a></li>
 </ul>
     </nav>
   </aside>
@@ -756,7 +804,7 @@ initFunction(initQuery);
             <div class="c-textbook__content">
               <p><a href="https://colab.research.google.com/github/paiml/awsbigdata/blob/master/Lesson7_AWS_Big_Data_Data_Security.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
 
-<h1 id="lesson-7-data-security">Lesson 7 Data Security</h1>
+<h1 id="lesson-2-data-security">Lesson 2 Data Security</h1>
 
 <h2 id="pragmatic-ai-labs">Pragmatic AI Labs</h2>
 
@@ -773,48 +821,69 @@ initFunction(initQuery);
   <li>Viewing more content at <a href="https://noahgift.com/">noahgift.com</a></li>
 </ul>
 
-<h2 id="41-identify-the-appropriate-data-processing-technology-for-a-given-scenario">4.1 Identify the appropriate data processing technology for a given scenario</h2>
+<h2 id="aws-shared-responsibility-model">AWS Shared Responsibility Model</h2>
 
-<h3 id="big-data-processing-technologies">Big Data Processing Technologies</h3>
+<p>One topic that you MUST understand to pass the AWS Big Data exam is the AWS Shared Responsibility Model.  This has been covered on every AWS exam that I’ve ever taken.  The good news is that the concepts are very simple to understand:  You, as a solution designer have a certain amount of responsibility when it comes to ensuring data security.  As an AWS customer you share this responsibility with AWS.  The line of delinieation for that responsibility varies depending on the AWS services employed by the solution.</p>
 
-<p><img src="https://user-images.githubusercontent.com/58792/54287663-54e6c700-4563-11e9-9f60-441302bbc929.png" alt="Big Data Processing" /></p>
+<h2 id="model-variations">Model Variations</h2>
+<p><img src="https://user-images.githubusercontent.com/39421615/54854935-c20c0200-4cb1-11e9-8558-2b580c2b40d4.jpg" alt="Shared Responsibility Model Overview" /></p>
 
-<h3 id="real-world-data-engineering">Real World Data Engineering</h3>
+<p>Shared Responsibility Model Overview</p>
 
-<p><img src="https://user-images.githubusercontent.com/58792/54398331-d713e000-4676-11e9-9239-4ec35a250734.png" alt="Data Engineering Example" /></p>
+<p>There are three major variations of the Shared Responsibility model.</p>
+<ul>
+  <li>Infrastructure.</li>
+  <li>Container.</li>
+  <li>Abstract.</li>
+</ul>
 
-<h2 id="42-determine-how-to-design-and-architect-the-data-processing-solution">4.2 Determine how to design and architect the data processing solution</h2>
+<p>The amount of responsibilty for security reduces as you move to the right.</p>
 
-<h3 id="overview">Overview</h3>
+<h2 id="infrastruture-model">Infrastruture Model</h2>
+<ul>
+  <li>EC2</li>
+  <li>EBS</li>
+  <li>VPC</li>
+</ul>
 
-<p><img src="https://user-images.githubusercontent.com/58792/54288887-75178580-4565-11e9-8a5c-ba6929012222.png" alt="feedback loop" /></p>
+<p>The infrastructure model applies to low level infrastructure service where the user has direct control over virtual hardware such as EC2 instances, EBS volumes, VPC networks and firewalls.</p>
 
-<h2 id="43-determine-the-operational-characteristics-of-the-solution-implemented">4.3 Determine the operational characteristics of the solution implemented</h2>
+<p>In the infrastructure model you are responsible for security at every level above the physical infrastrcucture.
+This includes.</p>
 
-<h2 id="44-understand-overview-of-aws-processing">4.4 Understand Overview of AWS Processing</h2>
+<p>Items to consider in this model are OS patching, data encryption (client, server, transport &amp; at rest)</p>
 
-<h3 id="overview-1">Overview</h3>
-<p><img src="https://user-images.githubusercontent.com/58792/54293313-fb839580-456c-11e9-848a-b47bdd309430.png" alt="processing" /></p>
+<p>Most Big Data solutions on AWS will not use this model.</p>
 
-<h2 id="45-understand-elastic-mapreduce-emr">4.5 Understand Elastic MapReduce (EMR)</h2>
+<h2 id="infrastructure-model">Infrastructure Model</h2>
+<p><img src="https://user-images.githubusercontent.com/39421615/54853999-aa7f4a00-4cae-11e9-8c77-a8d3b4f78f3d.jpg" alt="Infrastructure Model" /></p>
 
-<h2 id="46-learn-about-apache-hadoop---intro">4.6 Learn about Apache Hadoop - Intro</h2>
+<h2 id="container-model">Container Model</h2>
 
-<h2 id="47-apply-emr---architecture">4.7 Apply EMR - Architecture</h2>
+<p>The container model applies to services wher AWS manages the underlying foundation services such as virtaul servers, networking, and storage.</p>
 
-<h2 id="48-understand-emr---operations">4.8 Understand EMR - Operations</h2>
+<p>For example the RDS service is responsible is for provisioning servers, networks, EBS volumes AND RDBMS software such as MySQL INCLUDING security patches.  However you are still responsible for configuring firewall rules, user accounts, backups and recovery strategies.</p>
 
-<h2 id="49-use-emr---hive">4.9 Use EMR - Hive</h2>
+<p>This model is very common in Big Data solutions as it’s employed by EMR, Redshift, and other relevant services</p>
 
-<h2 id="410-use-emr---hbase">4.10 Use EMR - Hbase</h2>
+<p>As you can see the area of responsibility for AWS has grown while the Customer’s area has been reduced.</p>
 
-<h2 id="411-use-emr---presto">4.11 Use EMR - Presto</h2>
+<h2 id="container-model-1">Container Model</h2>
+<p><img src="https://user-images.githubusercontent.com/39421615/54854210-748e9580-4caf-11e9-9b9a-9461e245f3c6.jpg" alt="Container Model" /></p>
 
-<h2 id="412-use-emr---spark">4.12 Use EMR - Spark</h2>
+<h2 id="abstract-model">Abstract Model</h2>
 
-<h2 id="413-implement-emr---storage--compression">4.13 Implement EMR - Storage &amp; Compression</h2>
+<p>The Abstract model applies to all of the so called “serverless” service on the AWS platform.  Abstract services are fully managed by AWS with resources provisioned automatically as needed.</p>
 
-<h2 id="414-implement-emr---lambda">4.14 Implement EMR - Lambda</h2>
+<p>These services manage access control entirely via AWS IAM (Covered in the next section).</p>
+
+<ul>
+  <li>S3</li>
+  <li>DynamoDB</li>
+</ul>
+
+<h2 id="abstract-model-1">Abstract Model</h2>
+<p><img src="https://user-images.githubusercontent.com/39421615/54854001-af43fe00-4cae-11e9-904f-5b0ad0eeca1d.jpg" alt="Abstract Model" /></p>
 
               <nav class="c-page__nav">
   

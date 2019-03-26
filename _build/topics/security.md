@@ -4,8 +4,8 @@ prev_page:
   url: /topics/topics
   title: 'Topics'
 next_page:
-  url: /lessons/lessons
-  title: 'Lessons'
+  url: /topics/big_data_test_prep_notes
+  title: 'AWS Big Data Test Prep Notes'
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
 **AWS Security Best Practices**

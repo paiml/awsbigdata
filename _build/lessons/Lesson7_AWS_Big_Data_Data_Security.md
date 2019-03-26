@@ -15,7 +15,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <a href="https://colab.research.google.com/github/paiml/awsbigdata/blob/master/Lesson7_AWS_Big_Data_Data_Security.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-# Lesson 7 Data Security
+# Lesson 2 Data Security
 
 ## Pragmatic AI Labs
 
@@ -33,52 +33,67 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 *   Viewing more content at [noahgift.com](https://noahgift.com/)
 
 
-## 4.1 Identify the appropriate data processing technology for a given scenario
+## AWS Shared Responsibility Model
+
+One topic that you MUST understand to pass the AWS Big Data exam is the AWS Shared Responsibility Model.  This has been covered on every AWS exam that I've ever taken.  The good news is that the concepts are very simple to understand:  You, as a solution designer have a certain amount of responsibility when it comes to ensuring data security.  As an AWS customer you share this responsibility with AWS.  The line of delinieation for that responsibility varies depending on the AWS services employed by the solution.
+
+## Model Variations
+![Shared Responsibility Model Overview][Shared Responsibility Model Overview]
+
+[Shared Responsibility Model Overview]: https://user-images.githubusercontent.com/39421615/54854935-c20c0200-4cb1-11e9-8558-2b580c2b40d4.jpg
+
+Shared Responsibility Model Overview
+
+There are three major variations of the Shared Responsibility model.
+* Infrastructure.
+* Container.
+* Abstract.
+
+The amount of responsibilty for security reduces as you move to the right.
+
+## Infrastruture Model
+* EC2
+* EBS
+* VPC
+
+The infrastructure model applies to low level infrastructure service where the user has direct control over virtual hardware such as EC2 instances, EBS volumes, VPC networks and firewalls.
+
+In the infrastructure model you are responsible for security at every level above the physical infrastrcucture.
+This includes.
+
+Items to consider in this model are OS patching, data encryption (client, server, transport & at rest)
+
+Most Big Data solutions on AWS will not use this model.
+
+## Infrastructure Model
+![Infrastructure Model][Infrastructure Model]
+
+[Infrastructure Model]: https://user-images.githubusercontent.com/39421615/54853999-aa7f4a00-4cae-11e9-8c77-a8d3b4f78f3d.jpg
 
 
-### Big Data Processing Technologies
+## Container Model
 
-![Big Data Processing](https://user-images.githubusercontent.com/58792/54287663-54e6c700-4563-11e9-9f60-441302bbc929.png)
+The container model applies to services wher AWS manages the underlying foundation services such as virtaul servers, networking, and storage.
 
-### Real World Data Engineering
+For example the RDS service is responsible is for provisioning servers, networks, EBS volumes AND RDBMS software such as MySQL INCLUDING security patches.  However you are still responsible for configuring firewall rules, user accounts, backups and recovery strategies.
 
-![Data Engineering Example](https://user-images.githubusercontent.com/58792/54398331-d713e000-4676-11e9-9239-4ec35a250734.png)
+This model is very common in Big Data solutions as it's employed by EMR, Redshift, and other relevant services
 
-## 4.2 Determine how to design and architect the data processing solution
+As you can see the area of responsibility for AWS has grown while the Customer's area has been reduced.
 
-### Overview
+## Container Model
+![Container Model](https://user-images.githubusercontent.com/39421615/54854210-748e9580-4caf-11e9-9b9a-9461e245f3c6.jpg)
 
-![feedback loop](https://user-images.githubusercontent.com/58792/54288887-75178580-4565-11e9-8a5c-ba6929012222.png)
-
-## 4.3 Determine the operational characteristics of the solution implemented
-
-## 4.4 Understand Overview of AWS Processing
-
-### Overview
-![processing](https://user-images.githubusercontent.com/58792/54293313-fb839580-456c-11e9-848a-b47bdd309430.png)
-
-## 4.5 Understand Elastic MapReduce (EMR)
-
-## 4.6 Learn about Apache Hadoop - Intro
-
-## 4.7 Apply EMR - Architecture
-
-## 4.8 Understand EMR - Operations
-
-## 4.9 Use EMR - Hive
+## Abstract Model
 
 
+The Abstract model applies to all of the so called "serverless" service on the AWS platform.  Abstract services are fully managed by AWS with resources provisioned automatically as needed.
 
-## 4.10 Use EMR - Hbase
-
-
-## 4.11 Use EMR - Presto
+These services manage access control entirely via AWS IAM (Covered in the next section).
 
 
-## 4.12 Use EMR - Spark
+* S3
+* DynamoDB
 
-
-## 4.13 Implement EMR - Storage & Compression
-
-
-## 4.14 Implement EMR - Lambda
+## Abstract Model
+![Abstract Model](https://user-images.githubusercontent.com/39421615/54854001-af43fe00-4cae-11e9-904f-5b0ad0eeca1d.jpg)

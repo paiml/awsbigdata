@@ -21,6 +21,11 @@ book:
 	cp *.ipynb content/lessons/
 	jupyter-book build ./
 
+slides:
+	# Create slides from notebooks
+	jupyter nbconvert content/lessons/*.ipynb --to slides
+	mv content/lessons/*.slides.html content/slides
+
 runall:
 	jupyter-book run ./content
 

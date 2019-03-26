@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18896442-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-18896442-3');
+</script>
+
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>AWS Big Data Test Prep Notes</title>
+  <meta name="description" content="Official Video/Training Resources">
+
+  <link rel="canonical" href="https://paiml.github.io/awsbigdata/topics/big_data_test_prep_notes.html">
+  <link rel="alternate" type="application/rss+xml" title="AWS Certified Big Data-Specialty (ML-S) Guide" href="https://paiml.github.io/awsbigdata/feed.xml">
+
+  <meta property="og:url"         content="https://paiml.github.io/awsbigdata/topics/big_data_test_prep_notes.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="AWS Big Data Test Prep Notes" />
+<meta property="og:description" content="Official Video/Training Resources" />
+<meta property="og:image"       content="" />
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":
+    "https://paiml.github.io/awsbigdata/topics/big_data_test_prep_notes.html",
+  "headline":
+    "AWS Big Data Test Prep Notes",
+  "datePublished":
+    "2019-03-22T15:59:06-07:00",
+  "dateModified":
+    "2019-03-22T15:59:06-07:00",
+  "description":
+    "Official Video/Training Resources",
+  "author": {
+    "@type": "Person",
+    "name": "Noah Gift, Robert Jordan, Christopher Brousseau"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://paiml.github.io/awsbigdata",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://paiml.github.io/awsbigdata",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/awsbigdata/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/awsbigdata/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    CommonHTML: {
+        linebreaks: {
+            automatic: true,
+        },
+    },
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+
+  <!-- DOM updating function -->
+  <script>
+const runWhenDOMLoaded = cb => {
+  if (document.readyState != 'loading') {
+    cb()
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', cb)
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') cb()
+    })
+  }
+}
+
+// Helper function to init things quickly
+initFunction = function(myfunc) {
+  runWhenDOMLoaded(myfunc);
+  document.addEventListener('turbolinks:load', myfunc);
+};
+</script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/awsbigdata';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="/awsbigdata/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script>
+
+initFunction(function () {
+    anchors.add("main h1, main h2, main h3, main h4")
+});
+
+</script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="/awsbigdata/assets/js/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  <script src="https://unpkg.com/nbinteract-core" async></script>
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+  <!-- Google analytics -->
+  <script src="/awsbigdata/assets/js/ga.js" async></script>
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const codeCellId = index => `codecell${index}`
+
+const clipboardButton = id =>
+  `<a class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/awsbigdata/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  const codeCells = document.querySelectorAll('div.highlighter-rouge:not(.output) pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.querySelector(`pre#${id} + a`) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+  <!-- Hide cell code -->
+  
+<script>
+/**
+Add buttons to hide code cells
+*/
+
+
+var setCodeCellVisibility = function(inputField, kind) {
+    // Update the image and class for hidden
+    var id = inputField.getAttribute('data-id');
+    var codeCell = document.querySelector(`#${id}`);
+
+    if (kind === "visible") {
+        codeCell.classList.remove('hidden');
+        inputField.checked = true;
+    } else {
+        codeCell.classList.add('hidden');
+        inputField.checked = false;
+    }
+}
+
+var toggleCodeCellVisibility = function (event) {
+    // The label is clicked, and now we decide what to do based on the input field's clicked status
+    if (event.target.tagName === "LABEL") {
+        var inputField = event.target.previousElementSibling;
+    } else {
+        // It is the span inside the target
+        var inputField = event.target.parentElement.previousElementSibling;
+    }
+
+    if (inputField.checked === true) {
+        setCodeCellVisibility(inputField, "visible");
+    } else {
+        setCodeCellVisibility(inputField, "hidden");
+    }
+}
+
+
+// Button constructor
+const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+var addHideButton = function () {
+  // If a hide button is already added, don't add another
+  if (document.querySelector('div.hidecode input') !== null) {
+      return;
+  }
+
+  // Find the input cells and add a hide button
+  document.querySelectorAll('div.input_area div.highlight').forEach(function (item, index) {
+    if (!item.parentElement.classList.contains("hidecode")) {
+        // Skip the cell if it doesn't have a hidecode class
+        return;
+    }
+
+    const id = codeCellId(index)
+    item.setAttribute('id', id);
+    item.insertAdjacentHTML('afterend', hideCodeButton(id))
+
+    // Set up the visibility toggle
+    hideLink = document.querySelector(`#${id} + input + label`);
+    hideLink.addEventListener('click', toggleCodeCellVisibility)
+  });
+}
+
+
+// Initialize the hide buttos
+var initHiddenCells = function () {
+    // Add hide buttons to the cells
+    addHideButton();
+
+    // Toggle the code cells that should be hidden
+    document.querySelectorAll('div.hidecode input').forEach(function (item) {
+        setCodeCellVisibility(item, 'hidden');
+        item.checked = true;
+    })
+}
+
+initFunction(initHiddenCells);
+
+</script>
+
+
+  <!-- Load custom website scripts -->
+  <script src="/awsbigdata/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/awsbigdata/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/awsbigdata/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="/awsbigdata/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="https://paiml.com"><img src="/awsbigdata/images/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">AWS Certified Big Data-Specialty (ML-S) Guide</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/awsbigdata/intro.html"
+        >
+          
+          Home
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://github.com/paiml/awsbigdata"
+        >
+          
+          GitHub repository
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/awsbigdata/search.html">Search</a></li>
+        
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">AWS Big Data Speciality Certification Guide</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/awsbigdata/topics/topics.html"
+        >
+          
+          Topics
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/topics/security.html"
+                >
+                  
+                  security
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry c-sidebar__entry--active"
+                  href="/awsbigdata/topics/big_data_test_prep_notes.html"
+                >
+                  
+                  AWS Big Data Test Prep Notes
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/awsbigdata/lessons/lessons.html"
+        >
+          
+          Lessons
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson1_AWS_Big_Data_Introduction.html"
+                >
+                  
+                  Lesson 1 - AWS Big Data Introduction
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson2_AWS_Big_Data_Collection.html"
+                >
+                  
+                  Lesson 2 - AWS Big Data Collection
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson3_AWS_Big_Data_Storage.html"
+                >
+                  
+                  Lesson 3 - AWS Big Data Storage
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson4_AWS_Big_Data_Processing.html"
+                >
+                  
+                  Lesson 4 - AWS Big Data Processing
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson5_AWS_Big_Data_Analysis.html"
+                >
+                  
+                  Lesson 5 - AWS Big Data Analysis
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson6_AWS_Big_Data_Visualization.html"
+                >
+                  
+                  Lesson 6 - AWS Big Data Visualization
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson7_AWS_Big_Data_Data_Security.html"
+                >
+                  
+                  Lesson 7 - AWS Big Data Data Security
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson8_AWS_Big_Data_Case_Studies.html"
+                >
+                  
+                  Lesson 8 - AWS Big Data Case Studies
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson9_AWS_Big_Data_Exam_Prep.html"
+                >
+                  
+                  Lesson 9 - AWS Big Data Exam Prep
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/awsbigdata/lessons/Lesson10_AWS_Big_Data_Course_Summary.html"
+                >
+                  
+                  Lesson 10 - AWS Big Data Course Summary
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">A product of <a href="https://paiml.com">Pragmatic AI Labs</a></p>
+</nav>
+
+      
+      <!-- Shamelessly copied from minimal mistakes -->
+
+
+<!-- TOC will only show up if it has at least one item -->
+
+
+
+      
+      <main class="c-textbook__page" tabindex="-1">
+          <div class="o-wrapper">
+            <div class="c-sidebar-toggle">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <button
+    id="js-sidebar-toggle"
+    class="hamburger hamburger--arrowalt is-active"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
+  </button>
+</div>
+
+            
+
+            <div class="c-textbook__content">
+              <p><strong>Official Video/Training Resources</strong></p>
+
+<p><strong>Exam Readiness:  AWS Certified Big Data - Speciality (Digital)</strong></p>
+
+<ul>
+  <li>Training Link:  <a href="https://www.aws.training/learningobject/curriculum?id=21332">https://www.aws.training/learningobject/curriculum?id=21332</a></li>
+</ul>
+
+<p><strong>Preparation Steps</strong></p>
+
+<ol>
+  <li><em>Review Exam Guide and Sample Questions</em></li>
+  <li>Practice with Qwiklabs and Exam Prep Quests</li>
+  <li>Review AWS FAQ</li>
+  <li>Study AWS Whitepapers</li>
+  <li>Practice Exam</li>
+  <li>Exam</li>
+</ol>
+
+<p><strong>Big Data is Breaking Traditional IT Infrastructure</strong></p>
+
+<ul>
+  <li>Variety</li>
+  <li>Velocity</li>
+  <li>Volume</li>
+</ul>
+
+<p><strong>Evolution of Big Data Processing</strong></p>
+
+<ul>
+  <li><strong>Descriptive (Historical)</strong>
+    <ul>
+      <li>Dashboards, traditional query, and reporting</li>
+    </ul>
+  </li>
+  <li><strong>Real-time</strong>
+    <ul>
+      <li>Click-stream analysis, ad bidding, streaming data</li>
+    </ul>
+  </li>
+  <li><strong>Predictive</strong></li>
+</ul>
+
+<p><strong>Types of Services</strong></p>
+
+<p><strong>On AWS</strong></p>
+
+<ul>
+  <li>Amazon EC2</li>
+  <li>Kafka</li>
+  <li>Cassandra</li>
+</ul>
+
+<p><strong>Managed</strong></p>
+
+<ul>
+  <li>Amazon EMR</li>
+  <li>Amazon RDS</li>
+  <li>Amazon Elasticsearch</li>
+  <li>Amazon ElasticCache</li>
+  <li>Amazon Redshift</li>
+</ul>
+
+<p><strong>Serverless</strong></p>
+
+<ul>
+  <li>AWS Lambda</li>
+  <li>Amazon S3</li>
+  <li>Amazon API Gateway</li>
+  <li>Amazon Cognito</li>
+  <li>Amazon DynamoDB</li>
+  <li>Amazon CloudWatch</li>
+  <li>Amazon Kinesis</li>
+  <li>Amazon SQS</li>
+  <li>AWS IoT</li>
+</ul>
+
+<p><strong>AWS Big Data Services</strong></p>
+
+<p><strong>Ingest/Collect</strong></p>
+
+<ul>
+  <li>ISV connectors</li>
+  <li>AWS Direct Connect</li>
+  <li>AWS Snowball</li>
+  <li>Amazon S3 Transfer Acceleration</li>
+  <li>Kinesis Data Firehose</li>
+  <li>AWS IoT</li>
+  <li>AWS Glue</li>
+  <li>AWS Step Functions</li>
+</ul>
+
+<p><strong>Store</strong></p>
+
+<ul>
+  <li>Aurora</li>
+  <li>Amazon Elasticsearch</li>
+  <li>Amazon Kinesis</li>
+  <li>Amazon DynamoDB</li>
+  <li>Amazon S3</li>
+</ul>
+
+<p><strong>Analyze/Process</strong></p>
+
+<ul>
+  <li>Amazon EMR</li>
+  <li>EC2</li>
+  <li>AWS Lambda</li>
+  <li>Amazon Redshift</li>
+  <li>AWS DMS (CDC)</li>
+  <li>Amazon Athena</li>
+  <li>Amazon AI</li>
+  <li>Kinesis Data Analytics</li>
+</ul>
+
+<p><strong>Visualize/Consume</strong></p>
+
+<ul>
+  <li>Kibana</li>
+  <li>AWS Marketplace</li>
+  <li>IPython/Jupyter</li>
+  <li>Zeppelin</li>
+  <li>Amazon QuickSight</li>
+</ul>
+
+<p><strong>Amazon EMR and Kerberos</strong></p>
+
+<ul>
+  <li>Amazon EMR 5.10.0 and later supports Kerberos</li>
+  <li>Services and users that authenticate are called principals</li>
+  <li>Principles exist in a Kerberos realm</li>
+  <li>The Key Distribution Center (KDC) manages authentication</li>
+  <li>The KDC issues tickets</li>
+  <li>Principles can be from other Realms.  This requires Cross-Realm Trust</li>
+</ul>
+
+<p><strong>Amazon EMR Storage Permissions</strong></p>
+
+<ul>
+  <li>EMR File System (EMRFS) storage-based permissions</li>
+  <li>Consistent View</li>
+  <li>Data Encryption</li>
+</ul>
+
+<p><strong>Amazon EMR Data Encryption</strong></p>
+
+<ul>
+  <li>In-Transit Data Encryption for EMRFS traffic between S3 and Cluster nodes</li>
+  <li>TLS Encryption</li>
+  <li>At-Rest Data Encryption</li>
+</ul>
+
+<p><strong>Amazon EMR and Apache Hive</strong></p>
+
+<ul>
+  <li>Four features of Hive that are specific to Amazon EMR
+    <ul>
+      <li>Load table partitions automatically from Amazon S3</li>
+      <li>Specify an off-instance metadata store</li>
+      <li>Write data directly to Amazon S3</li>
+      <li>Access resources located in Amazon S3</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon EMR Log Auditing</strong></p>
+
+<ul>
+  <li>Services
+    <ul>
+      <li>Apache Spark</li>
+      <li>Apache HBase</li>
+      <li>Apache Hadoop</li>
+      <li>Apache Tez</li>
+      <li>Apache Flink</li>
+    </ul>
+  </li>
+  <li>AWS CloudTrail
+    <ul>
+      <li>Amazon EMR API calls</li>
+      <li>AWS KMS API calls</li>
+      <li>Amazon S3 API calls</li>
+    </ul>
+  </li>
+  <li>Amazon EMR
+    <ul>
+      <li>/JobFlowId/node</li>
+      <li>/JobFlowId/steps/N</li>
+      <li>/JobFlowId/containers</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon Redshift Security</strong></p>
+
+<ul>
+  <li>IAM roles to access data on Amazon S3</li>
+  <li>IAM SSO authentication</li>
+  <li>SSL to secure data in transit</li>
+  <li>Encryption to secure data at rest</li>
+  <li>No direct access to compute nodes</li>
+  <li>Support for Amazon VPC</li>
+  <li>User audit logging and AWS CloudTrail integration</li>
+  <li>SOC 1/2/3, PCI-DSS Level 1, FedRAMP</li>
+  <li>Limit Data Access using Views (know this is possible on the exam)</li>
+</ul>
+
+<p><strong>Amazon Redshift Networking</strong></p>
+
+<ul>
+  <li>Enhanced VPC routing
+    <ul>
+      <li>Query traffic flows only through customer VPC</li>
+      <li>Strict data traffic management</li>
+      <li>Amazon S3 endpoint to access Amazon S3</li>
+      <li>Locked down security groups</li>
+      <li>SSL certificate for each Amazon Redshift cluster</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon Redshift IAM Authorization</strong></p>
+
+<ul>
+  <li>IAM support for data LOAD/UNLOAD
+    <ul>
+      <li>IAM roles for LOAD/UNLOAD operations</li>
+      <li>A cluster can have access to specific S3 buckets</li>
+      <li>Simplify credentials management</li>
+      <li>Access to AWS KMS for encryption</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon Redshift encryption</strong></p>
+
+<ul>
+  <li>In Transit
+    <ul>
+      <li>Amazon Redshift API calls are made using HTTPS</li>
+      <li>SSL certificate for each Amazon Redshift cluster required</li>
+    </ul>
+  </li>
+  <li>At Rest
+    <ul>
+      <li>Enable cluster encryption</li>
+      <li>Encrypted via:
+        <ul>
+          <li>AWS KMS</li>
+          <li>Hardware security module</li>
+        </ul>
+      </li>
+      <li>Supports server-side encryption using SSE-KMS and SSE-S3</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon Spark on AWS</strong></p>
+
+<ul>
+  <li>Spark SQL
+    <ul>
+      <li>Can read data from an existing Hive installation</li>
+    </ul>
+  </li>
+  <li>Spark Streaming
+    <ul>
+      <li>Ingest from kinesis</li>
+      <li>Push to filesystems, and dashboards</li>
+    </ul>
+  </li>
+  <li>MLLib (Machine Learning)
+    <ul>
+      <li>ML library</li>
+    </ul>
+  </li>
+  <li>GraphX
+    <ul>
+      <li>Designed to simplify graph analytics tasks</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon EMR Sandbox Applications</strong></p>
+
+<ul>
+  <li>Oozie
+    <ul>
+      <li>Workflow scheduler Hadoop Jobs</li>
+    </ul>
+  </li>
+  <li>Presto
+    <ul>
+      <li>Distributed SQL query engine for GB to PB data</li>
+    </ul>
+  </li>
+  <li>Spark
+    <ul>
+      <li>Unified analytics engine</li>
+    </ul>
+  </li>
+  <li>Sqoop
+    <ul>
+      <li>Tool designed for efficiently transferring bulk data between Hadoop and structured data</li>
+    </ul>
+  </li>
+  <li>Zeppelin
+    <ul>
+      <li>Web-based notebook (similar to Jupyter)</li>
+    </ul>
+  </li>
+  <li>Zookeeper
+    <ul>
+      <li>Centralized service for maintaining config information</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon EMR Spot Instances</strong></p>
+
+<ul>
+  <li>Master node</li>
+  <li>Core instance fleet</li>
+  <li>Task instance fleet</li>
+</ul>
+
+<p><strong>Amazon Redshift</strong></p>
+
+<ul>
+  <li>Columns are fast to read</li>
+  <li>Database inserts are expensive and inefficient (update tables)</li>
+  <li>COPY and UPSERT</li>
+  <li>MPP (Massively Parallel Processing cluster).</li>
+  <li>Key Distribution Styles
+    <ul>
+      <li>Even:  Distribute the rows across the slices in a round-robin fashion <strong>(Doesn’t participate in Joins)</strong></li>
+      <li>Key:  Distribute according to the values in one column <strong>(Columns in Joins are placed together)</strong></li>
+      <li>All:  Distribute the entire table to every node <strong>(Much longer to load update and insert).  Multiplies the data by every node</strong></li>
+    </ul>
+  </li>
+  <li>Sort Key:
+    <ul>
+      <li>Compound
+        <ul>
+          <li>Query predicates use a predicate</li>
+        </ul>
+      </li>
+      <li>Interleaved
+        <ul>
+          <li>Equal preference to predicates</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Queues:
+    <ul>
+      <li>By default 1 queue with 5 concurrent queries</li>
+      <li>Can have 50 concurrent queries to queue</li>
+      <li>Can specify by each Queue</li>
+      <li>Superuser can always run a job</li>
+    </ul>
+  </li>
+  <li>What are the functions of the Amazon Redshift leader node?
+    <ul>
+      <li>Acts as a SQL endpoint</li>
+      <li>Stores metadata</li>
+      <li>Generates and coordinates query execution plans</li>
+    </ul>
+  </li>
+  <li>What are the AWS services that can be used to load data into Amazon Redshift?
+    <ul>
+      <li>DynamoDB</li>
+      <li>EMR</li>
+      <li>DataPipeline</li>
+      <li>Kinesis Data Firehose</li>
+      <li>Amazon S3</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon Redshift vs EMR</strong></p>
+
+<ul>
+  <li>EMR (custom code to analyze large datasets with Spark/Hadoop)</li>
+  <li>Redshift:
+    <ul>
+      <li>Complex queries on structured data</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Amazon Athena Uses</strong></p>
+
+<ul>
+  <li>Apache Hive for DDL functionality
+    <ul>
+      <li>Complex data types</li>
+      <li>Multitude of formats</li>
+      <li>Supports data partitioning</li>
+      <li>Optimized for query throughput</li>
+    </ul>
+  </li>
+  <li>Teradata Presto for SQL queries
+    <ul>
+      <li>An in-memory distributed query engine</li>
+      <li>ANSI-SQL compatible with extensions</li>
+      <li>Optimized for latency</li>
+    </ul>
+  </li>
+  <li>Best Practices
+    <ul>
+      <li>Partitioning
+        <ul>
+          <li>Reduce the amount of data scanned</li>
+          <li>Read-only files necessary for queries</li>
+        </ul>
+      </li>
+      <li>Compression and file sizes
+        <ul>
+          <li>Splittable files allow Athena’s execution engine to split reading of a file by multiple readers</li>
+        </ul>
+      </li>
+      <li>Columnar formats for analytics
+        <ul>
+          <li>Optimize column-based reads</li>
+          <li>Use Apache Parquet and Apache ORC</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Asynchronous Interaction Model using Athena API supports:
+    <ul>
+      <li>Named queries</li>
+      <li>Column data and metadata</li>
+      <li>Integration with existing data access tools</li>
+      <li>Paginated result sets</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Choosing Analytics Services</strong></p>
+
+<ul>
+  <li>Amazon Redshift
+    <ul>
+      <li>Data warehouse for historical analysis and reporting</li>
+    </ul>
+  </li>
+  <li>Amazon Redshift Spectrum
+    <ul>
+      <li>Extends data warehouse queries to Amazon S3</li>
+      <li>Differentiates performance for complex queries over TBs of data on Amazon S3</li>
+      <li>Improves availability and concurrency on Amazon Redshift</li>
+    </ul>
+  </li>
+  <li>Amazon Athena
+    <ul>
+      <li>On-demand interactive querying</li>
+      <li>Run simple queries by using standard SQL on Amazon S3</li>
+    </ul>
+  </li>
+</ul>
+
+              <nav class="c-page__nav">
+  
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/awsbigdata/topics/security">
+      〈 <span class="u-margin-right-tiny"></span> security
+    </a>
+  
+
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/awsbigdata/lessons/lessons">
+      Lessons <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
