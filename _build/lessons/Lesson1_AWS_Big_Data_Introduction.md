@@ -36,11 +36,47 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 
 ## Lesson 1.1  Intro & Learn the answer to “What is Big Data?”
 
+
+![Big Data Challenges](https://user-images.githubusercontent.com/58792/54285644-98d7cd00-455f-11e9-823d-ee6fe85af26e.png)
+
+### Volume
+
+### Velocity
+
+### Variety
+
+
+### Veracity
+
+
+### Value
+
 ## Lesson 1.2 Learn about the history of Big Data
+
+### Term Defined 2001
+
+### Film an Early "Big Data" Industry
 
 ## Lesson 1.3 Know AWS Certification
 
+### Collection
+
+### Storage
+
+### Processing
+
+### Analysis
+
+### Visualization
+
+### Data Security
+
 ## Lesson 1.4 Understand the AWS Certification Exam-Blueprint
+
+* [AWS Big Data Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-bigdata-spec/AWS%20Certified%20Big%20Data%20-%20Specialty_Exam%20Guide_v1.3_FINAL.pdf)
+
+
+![Exam Learning Path](https://d1.awsstatic.com/Train%20&%20Cert/Learning%20Paths/path_specialty-ALL.793e6d1c397d70993a0d18b9c627d1f41239802c.png)
 
 ## Lesson 1.5 Learn Exam Strategy
 

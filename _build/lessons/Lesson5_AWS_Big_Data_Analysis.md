@@ -33,52 +33,29 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 *   Viewing more content at [noahgift.com](https://noahgift.com/)
 
 
-## 4.1 Identify the appropriate data processing technology for a given scenario
+## 5.1 Determine the tools and techniques required for analysis
 
 
-### Big Data Processing Technologies
+## 5.2 Determine how to design and architect the analytical solution
 
-![Big Data Processing](https://user-images.githubusercontent.com/58792/54287663-54e6c700-4563-11e9-9f60-441302bbc929.png)
+## 5.3 Determine and optimize the operational characteristics of the Analysis
 
-### Real World Data Engineering
+## 5.4 Understand Redshift Overview
 
-![Data Engineering Example](https://user-images.githubusercontent.com/58792/54398331-d713e000-4676-11e9-9239-4ec35a250734.png)
+## 5.5 Learn Redshift Design
 
-## 4.2 Determine how to design and architect the data processing solution
+## 5.6 Use Redshift Data Ingestion
 
-### Overview
+## 5.7 Apply Redshift Operations
 
-![feedback loop](https://user-images.githubusercontent.com/58792/54288887-75178580-4565-11e9-8a5c-ba6929012222.png)
+## 5.8 Use AWS Elasticsearch - operational analytics
 
-## 4.3 Determine the operational characteristics of the solution implemented
-
-## 4.4 Understand Overview of AWS Processing
-
-### Overview
-![processing](https://user-images.githubusercontent.com/58792/54293313-fb839580-456c-11e9-848a-b47bdd309430.png)
-
-## 4.5 Understand Elastic MapReduce (EMR)
-
-## 4.6 Learn about Apache Hadoop - Intro
-
-## 4.7 Apply EMR - Architecture
-
-## 4.8 Understand EMR - Operations
-
-## 4.9 Use EMR - Hive
+## 5.9 Implement Machine Learning - Clustering & Regression
 
 
 
-## 4.10 Use EMR - Hbase
+## 5.10 Use AWS Athena - interactive analytics
 
 
-## 4.11 Use EMR - Presto
+## 5.11 Quiz - Analysis
 
-
-## 4.12 Use EMR - Spark
-
-
-## 4.13 Implement EMR - Storage & Compression
-
-
-## 4.14 Implement EMR - Lambda
