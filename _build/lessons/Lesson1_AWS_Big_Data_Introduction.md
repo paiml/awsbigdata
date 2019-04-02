@@ -51,29 +51,49 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 
 ### Value
 
-## Lesson 1.2 Learn about the history of Big Data
+## Lesson 1.2 Explore the history of Big Data
 
 ### Term Defined 2001
 
 ### Film an Early "Big Data" Industry
 
-## Lesson 1.3 Know AWS Certification
+## Lesson 1.3 Know AWS Certification: 6 domain areas
 
-### Collection
 
-### Storage
 
-### Processing
+### 1- Collection
 
-### Analysis
+### 2 - Storage
 
-### Visualization
+### 3 - Processing
 
-### Data Security
+### 4- Analysis
+
+### 5- Visualization
+
+### 6- Data Security
 
 ## Lesson 1.4 Understand the AWS Certification Exam-Blueprint
 
 * [AWS Big Data Exam Guide](https://d1.awsstatic.com/training-and-certification/docs-bigdata-spec/AWS%20Certified%20Big%20Data%20-%20Specialty_Exam%20Guide_v1.3_FINAL.pdf)
+
+
+#### split of approximate # of questions by Domain Area:
+
+Collection - worth 17% of the  test, 11 questions about 29 min
+
+Storage - also 17% of the  test, 11 questions
+
+Processing - same split
+
+Analysis - also 17% of the  test, 29 minutes
+
+Visualization - the shortest section on the exam:  12% of the exam, about 8 questions
+
+Data Security - we said this was important before, and it is.  Data Security is the longest section, 20% of the exam, about 13 questions
+
+
+
 
 
 ![Exam Learning Path](https://d1.awsstatic.com/Train%20&%20Cert/Learning%20Paths/path_specialty-ALL.793e6d1c397d70993a0d18b9c627d1f41239802c.png)
@@ -85,3 +105,7 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 ## Lesson 1.7 Learn Tips & Tricks
 
 ## Lesson 1.8 Learn How to register for AWS Certification Exam
+
+Link to AWS Registration:  https://www.aws.training/certification?src=bd-spec
+
+

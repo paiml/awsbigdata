@@ -30,6 +30,7 @@ This notebook was produced by [Pragmatic AI Labs](https://paiml.com/).  You can 
 *  Watching video [Essential Machine Learning and AI with Python and Jupyter Notebook-Video-SafariOnline](https://www.safaribooksonline.com/videos/essential-machine-learning/9780135261118) on Safari Books Online.
 * Watching video [AWS Certified Machine Learning-Speciality](https://learning.oreilly.com/videos/aws-certified-machine/9780135556597)
 * Purchasing video [Essential Machine Learning and AI with Python and Jupyter Notebook- Purchase Video](http://www.informit.com/store/essential-machine-learning-and-ai-with-python-and-jupyter-9780135261095)
+* Purchasing video [AWS Certified Machine Learning Video and Practice Exams](http://www.pearsonitcertification.com/store/aws-certified-machine-learning-specialty-ml-s-complete-9780135556511)
 *   Viewing more content at [noahgift.com](https://noahgift.com/)
 
 
@@ -43,7 +44,156 @@ Lesson 8:  Case Studies (60 min)
 
 
 
+## 8.1 Understand Big Data for Sagemaker
+
+### Search
+
+#### [Demo] Search
+
+[Manage Machine Learning Experiments with Search](https://docs.aws.amazon.com/sagemaker/latest/dg/search.html)
+
+
+
+*   Finding training jobs
+*   Rank training jobs
+*   Tracing lineage of a model
+
+
+
+### Ground Truth
+
+![ground_truth](https://user-images.githubusercontent.com/58792/49688683-9bdba100-faca-11e8-8d93-a55ce6c35a92.png)
+
+
+
+*   Setup and Manage labeling jobs
+*   Uses active learning and human labeling
+*   First 500 objects labeled per month are free
+
+
+
+#### [Demo] Labeling Job
+
+### Notebook
+
+![notebooks](https://user-images.githubusercontent.com/58792/49688694-d04f5d00-faca-11e8-9fad-eb63b2534b07.png)
+
+#### [Demo] Sagemaker Notebooks
+
+*   Create and run Jupyter Notebooks
+  -  Using Jupyter
+  -  Using JupyterLab
+  -  Using the terminal
+  
+*   Lifecycle configurations
+
+*   Git Repositories
+  - public repositories can be cloned on Notebook launch
+
+
+
+### Training
+
+![training](https://user-images.githubusercontent.com/58792/49688717-05f44600-facb-11e8-8d7f-cf33d272573a.png)
+
+#### [Demo] Sagemaker Training
+
+*   Algorithms
+  -  Create algorithm
+  -  Subscribe [AWS Marketplace](https://aws.amazon.com/marketplace/search/results?page=1&filters=fulfillment_options%2Cresource_type&fulfillment_options=SAGEMAKER&resource_type=ALGORITHM)
+
+  
+*   Training Jobs
+
+*   HyperParameter Tuning Jobs
+
+
+### Inference
+
+![inference](https://user-images.githubusercontent.com/58792/49688735-2fad6d00-facb-11e8-94cb-cba9322e309b.png)
+
+#### [Demo] Sagemaker Inference
+
+*  Compilation jobs
+
+*  Model packages
+
+*  Models
+
+*  Endpoint configurations
+
+*  Endpoints
+
+*  Batch transform jobs
+
+
+### Built in Sagemaker Algorithms
+
+Table of [algorithms provided by Amazon Sagemaker](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-algo-docker-registry-paths.html)
+
+![aws_algorithms](https://user-images.githubusercontent.com/58792/49692597-58595500-fb13-11e8-9db3-e1fe371ac36a.png)
+
+
+
+
+
+
+
+### Sagemaker Built-in Algorithms---Examples
+
+
+
+#### BlazingText
+
+
+* unsupervised learning algorithm for generating **Word2Vec embeddings.**
+* aws blog post [BlazingText](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-blazingtext-parallelizing-word2vec-on-multiple-cpus-or-gpus/)
+
+
+
+![BlazingText](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2018/01/18/sagemaker-word2vec-3-1.gif)
+
+#### DeepAR Forecasting
+
+* supervised learning algorithm for forecasting scalar (that is, one-dimensional) time series using recurrent neural networks (RNN)
+* [DeepAR Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/deepar.html)
+
+![DeepAR](https://docs.aws.amazon.com/sagemaker/latest/dg/images/deepar-2.png)
+
+### Demo
+
+
+[Demo]
+
+* **Built in Sagemaker Algorithms Scale:   **
+
+---
+
+"We recommend training k-means on CPU instances. You can train on GPU instances, but should limit GPU training to p*.xlarge instances because only one GPU 
+per instance is used.""
+
+
+* County Census Notebook
+
+
+## 8.2 Learn Sagemaker and EMR Integration
+
+![kernel](https://user-images.githubusercontent.com/58792/55046667-982f4400-4fff-11e9-8db1-b70766de3f52.png)
+
+### Demo
+
+
+
+
+![EMR](https://user-images.githubusercontent.com/58792/55369064-d1f1c600-54a9-11e9-9937-9ded09489c6d.png)
+
+* [Sagemaker/Spark/EMR Notebooks](https://aws.amazon.com/blogs/machine-learning/build-amazon-sagemaker-notebooks-backed-by-spark-in-amazon-emr/)
+
 ## 8.3 Learn Serverless Production Big Data Application Development
+
+[Source Code for Demo](https://github.com/noahgift/awslambda/tree/master/example_src)
+
+[Demo]
 
 ### Creating Timed Lambdas
 
@@ -268,3 +418,114 @@ download: s3://fangsentiment/facebook_sentiment.csv to ./facebook_sentiment.csv
 ```
 
 
+
+## 8.4 Implement Containerization for Big Data
+
+[Demo]
+
+## 8.5 Implement Spot Instances for Big Data Pipeline
+
+**Real Massively Parallel Computer Vision Pipeline**
+
+![Spot Pipeline](https://user-images.githubusercontent.com/58792/55369313-ed110580-54aa-11e9-83d5-724611b6f8bd.png)
+
+[Spot Launcher](https://github.com/noahgift/spot_price_machine_learning/blob/master/spot_launcher.py)
+
+
+
+```python
+#!/usr/bin/env python
+"""Launches a test spot instance"""
+
+import click
+import boto3
+import base64
+
+from sensible.loginit import logger
+log = logger(__name__)
+
+#Tell Boto3 To Enable Debug Logging
+#boto3.set_stream_logger(name='botocore')
+
+@click.group()
+def cli():
+    """Spot Launcher"""
+
+
+def user_data_cmds(duration):
+    """Initial cmds to run, takes duration for halt cmd"""
+
+    cmds = """
+        #cloud-config
+        runcmd:
+         - echo "halt" | at now + {duration} min
+    """.format(duration=duration)
+    return cmds
+
+@cli.command("launch")
+@click.option('--instance', default="r4.large", help='Instance Type')
+@click.option('--duration', default="55", help='Duration')
+@click.option('--keyname', default="pragai", help='Key Name')
+@click.option('--profile', default="arn:aws:iam::561744971673:instance-profile/admin",
+                     help='IamInstanceProfile')
+@click.option('--securitygroup', default="sg-61706e07", help='Key Name')
+@click.option('--ami', default="ami-6df1e514", help='Key Name')
+def request_spot_instance(duration, instance, keyname, 
+                            profile, securitygroup, ami):
+    """Request spot instance"""
+
+    #import pdb;pdb.set_trace()
+    user_data = user_data_cmds(duration)
+    LaunchSpecifications = {
+            "ImageId": ami,
+            "InstanceType": instance,
+            "KeyName": keyname,
+            "IamInstanceProfile": {
+                "Arn": profile
+            },
+            "UserData": base64.b64encode(user_data.encode("ascii")).\
+                decode('ascii'),
+            "BlockDeviceMappings": [
+                {
+                    "DeviceName": "/dev/xvda",
+                    "Ebs": {
+                        "DeleteOnTermination": True,
+                        "VolumeType": "gp2",
+                        "VolumeSize": 8,
+                    }
+                }
+            ],
+            "SecurityGroupIds": [securitygroup]
+        }
+
+    run_args = {
+            'SpotPrice'           : "0.8",
+            'Type'                : "one-time",
+            'InstanceCount'       : 1,
+            'LaunchSpecification' : LaunchSpecifications
+        }
+
+    msg_user_data = "SPOT REQUEST DATA: %s" % run_args
+    log.info(msg_user_data)
+
+    client = boto3.client('ec2', "us-west-2")
+    reservation = client.request_spot_instances(**run_args)
+    return reservation
+
+if __name__ == '__main__':
+    cli()
+
+```
+
+
+
+
+### Demo
+
+
+
+
+
+* Spot Launch Demo and Walkthrough on Pricing
+* Spot Instances EMR
+* Spot Instances AWS Batch
