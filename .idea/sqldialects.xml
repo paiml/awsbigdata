@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-00-sales-create-tables.sql" dialect="Redshift" />
+    <file url="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-01-sales-load-s3data.sql" dialect="Redshift" />
+    <file url="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-02-sales-check-tables-after-data-load.sql" dialect="Redshift" />
+  </component>
+</project>

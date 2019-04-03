@@ -1,9 +1,9 @@
 -- list all public tables, with columns and metadata (which we created) in Redshift
-SELECT * FROM PG_TABLE_DEF
+SELECT * FROM pg_table_def
 WHERE schemaname = 'public';
 
 -- list all tables and columns where datatype of column is in a list we define
-SELECT * FROM PG_TABLE_DEF
+SELECT * FROM pg_table_def
 WHERE schemaname = 'public'
 AND type IN ('smallint', 'date');
 
@@ -23,7 +23,7 @@ SELECT firstname, lastname, total_quantity
 FROM   (SELECT buyerid, sum(qtysold) total_quantity
         FROM  sales
         GROUP BY buyerid
-        ORDER BY total_quantity desc limit 20) Q, users
+        ORDER BY total_quantity desc limit 7) Q, users
 WHERE Q.buyerid = userid
 ORDER BY Q.total_quantity desc;
 
@@ -32,7 +32,7 @@ SELECT eventname, total_price
 FROM  (SELECT eventid, total_price, ntile(1000) over(order by total_price desc) as percentile
        FROM (SELECT eventid, sum(pricepaid) total_price
              FROM   sales
-             GROUP BY eventid)) Q, event E
+             GROUP BY eventid) as etp) Q, event E
        WHERE Q.eventid = E.eventid
        AND percentile = 1
 ORDER BY total_price desc;

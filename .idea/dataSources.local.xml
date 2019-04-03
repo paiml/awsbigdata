@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="redshift-advanced-setup" uuid="6023b49d-a747-4c56-921f-531146b77644">
+      <database-info product="PostgreSQL" version="08.00.0002" jdbc-version="4.2" driver-name="RedshiftJDBC" driver-version="01.02.16.1027" dbms="REDSHIFT" exact-version="1.0.6805" exact-driver-version="1.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <secret-storage>master_key</secret-storage>
+      <user-name>awsuser</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
+      <ssl-config>
+        <ca-cert>C:\Users\chris\Downloads\redshift-ca-bundle.crt</ca-cert>
+        <enabled>true</enabled>
+      </ssl-config>
+    </data-source>
+  </component>
+</project>
