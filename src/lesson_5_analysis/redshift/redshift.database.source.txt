@@ -1,0 +1,6 @@
+#DataSourceSettings#
+#LocalDataSource: redshift - big data
+#BEGIN#
+<data-source source="LOCAL" name="redshift - big data" uuid="66d74243-ee7d-4cda-b0a3-cd4cccec2c82"><database-info product="PostgreSQL" version="08.00.0002" jdbc-version="4.2" driver-name="RedshiftJDBC" driver-version="01.02.16.1027" dbms="REDSHIFT" exact-version="1.0.6476" exact-driver-version="1.2"><identifier-quote-string>&quot;</identifier-quote-string></database-info><driver-ref>redshift</driver-ref><synchronize>true</synchronize><jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver><jdbc-url>jdbc:redshift://redshift-public.cybaa2oey66f.us-east-1.redshift.amazonaws.com:5439/dev</jdbc-url><secret-storage>master_key</secret-storage><user-name>awsuser</user-name><introspection-schemas>@:@|dev:*</introspection-schemas></data-source>
+#END#
+
