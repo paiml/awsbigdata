@@ -2,7 +2,7 @@
     "fileLocations": [
       {
             "URIs": [
-                "s3://noaa-ghcn-pds/csv/2010.csv"
+                "s3://noaa-ghcn-pds/csv/1850.csv"
             ]
         },
         {

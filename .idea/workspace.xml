@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d36effe-1b3e-4faf-8a6f-ccaa391477fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644/storage_v2/_src_/database/dev.FYQBAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644/storage_v2/_src_/database/dev.FYQBAA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,15 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,12 +83,12 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6023b49d-a747-4c56-921f-531146b77644/console.sql" />
         <option value="$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql" />
-        <option value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" />
         <option value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json" />
+        <option value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-24" />
     <option name="y" value="15" />
     <option name="width" value="1941" />
@@ -153,6 +140,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\chris\AppData\Roaming\npm\node_modules\prettier" />
@@ -192,17 +182,19 @@
       <workItem from="1554262862095" duration="3030000" />
       <workItem from="1554314143569" duration="3447000" />
       <workItem from="1554328953413" duration="591000" />
-      <workItem from="1554331289495" duration="4093000" />
+      <workItem from="1554331289495" duration="4124000" />
+      <workItem from="1554402187910" duration="3024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11928000" />
+    <option name="totallyTimeSpent" value="14983000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21682848" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22006473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
