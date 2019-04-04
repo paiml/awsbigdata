@@ -1,0 +1,28 @@
+{
+    "fileLocations": [
+      {
+            "URIs": [
+                "s3://noaa-ghcn-pds/csv/1800.csv",
+                "s3://noaa-ghcn-pds/csv/1810.csv",
+                "s3://noaa-ghcn-pds/csv/1820.csv",
+                "s3://noaa-ghcn-pds/csv/1830.csv",
+                "s3://noaa-ghcn-pds/csv/1840.csv",
+                "s3://noaa-ghcn-pds/csv/1850.csv",
+                "s3://noaa-ghcn-pds/csv/1860.csv",
+                "s3://noaa-ghcn-pds/csv/1870.csv",
+                "s3://noaa-ghcn-pds/csv/1880.csv",
+                "s3://noaa-ghcn-pds/csv/1890.csv"
+            ]
+        },
+        {
+            "URIPrefixes": [
+                ""
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+        "format": "CSV",
+        "delimiter": ",",
+        "containsHeader": "false"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "fileLocations": [
+      {
+            "URIs": [
+                "s3://noaa-ghcn-pds/csv/2010.csv"
+            ]
+        },
+        {
+            "URIPrefixes": [
+                ""
+            ]
+        }
+    ],
+    "globalUploadSettings": {
+        "format": "CSV",
+        "delimiter": ",",
+        "containsHeader": "false"
+    }
+}

@@ -5,7 +5,7 @@
       <driver-ref>redshift</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:redshift://aws-redshift-advanced.cybaa2oey66f.us-east-1.redshift.amazonaws.com:5439/dev</jdbc-url>
+      <jdbc-url>jdbc:redshift://redshift-cluster-advanced2.cybaa2oey66f.us-east-1.redshift.amazonaws.com:5439/dev</jdbc-url>
     </data-source>
   </component>
 </project>

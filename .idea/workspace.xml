@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d36effe-1b3e-4faf-8a6f-ccaa391477fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/awsbigdata.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/awsbigdata.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644/storage_v2/_src_/database/dev.FYQBAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6023b49d-a747-4c56-921f-531146b77644/storage_v2/_src_/database/dev.FYQBAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,44 +67,21 @@
     </expanded>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6023b49d-a747-4c56-921f-531146b77644/console.sql">
+        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="68">
+              <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-00-sales-create-tables.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="25" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-01-sales-load-s3data.sql">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql">
+        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-drop_tables-sales-example.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="4" selection-start-line="2" selection-end-line="2" selection-end-column="63" />
+            <state relative-caret-position="68">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -118,16 +96,20 @@
       <list>
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6023b49d-a747-4c56-921f-531146b77644/console.sql" />
         <option value="$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql" />
+        <option value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json" />
+        <option value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="825" />
-    <option name="y" value="-3" />
-    <option name="width" value="1590" />
-    <option name="height" value="1401" />
+    <option name="x" value="-24" />
+    <option name="y" value="15" />
+    <option name="width" value="1941" />
+    <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -157,7 +139,7 @@
               <item name="awsbigdata" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lesson_5_analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="redshift" type="462c0819:PsiDirectoryNode" />
+              <item name="quicksight" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -170,12 +152,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lesson_5_analysis/redshift" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lesson_5_analysis/quicksight" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\chris\AppData\Roaming\npm\node_modules\prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="sshConsole" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\chris\Dropbox\0.SurfaceOwl\dev\awsbigdata\src\lesson_5_analysis\quicksight" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -203,21 +190,21 @@
       <updated>1554260099262</updated>
       <workItem from="1554260101563" duration="767000" />
       <workItem from="1554262862095" duration="3030000" />
+      <workItem from="1554314143569" duration="3447000" />
+      <workItem from="1554328953413" duration="591000" />
+      <workItem from="1554331289495" duration="4093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3797000" />
+    <option name="totallyTimeSpent" value="11928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20631067" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21682848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32984293" />
-      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.45898777" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5026178" />
@@ -232,13 +219,15 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="14" visible="true" weight="0.45898777" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32984293" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Json Parser" order="3" />
+      <window_info anchor="right" id="Json Parser" order="3" weight="0.32928804" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="JSON Viewer" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.2669903" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2669903" />
       <window_info anchor="right" id="JSON Utils" order="7" />
     </layout>
   </component>
@@ -246,6 +235,12 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/select_count____from_users.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6023b49d-a747-4c56-921f-531146b77644/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -253,47 +248,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-vacuum_analyze.sql">
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="5" selection-start-line="6" selection-end-line="7" selection-end-column="8" />
+        <state relative-caret-position="493">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/select_count____from_users.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-vacuum_analyze.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="6" selection-end-line="7" selection-end-column="8" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-drop_tables-sales-example.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-end-line="2" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-00-sales-create-tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="25" selection-end-line="74" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-02-sales-check-tables-after-data-load.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="136">
+          <caret line="8" column="4" selection-start-line="8" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-01-sales-load-s3data.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-03-sales-sample-queries.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/redshift/redshift-00-sales-create-tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/athena/noaa.select_hot_days.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/athena/noaa.create_table_from_gzip.ddl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/athena/noaa.create_database.ddl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest_20_year_interval.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lesson_5_analysis/quicksight/quicksight_noaa_manifest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
         </state>
       </provider>
     </entry>

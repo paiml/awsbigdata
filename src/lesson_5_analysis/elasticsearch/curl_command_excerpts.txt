@@ -1,0 +1,14 @@
+<< replace URL with one from your cluster>>
+
+Exercise 1 -single record
+
+curl -XPUT https://search-elasticsearch-exam-prep-xcpgfere57vj2lnijerxbo7yve.us-east-1.es.amazonaws.com/movies/_doc/1 -d '{"director": "Burton, Tim", "genre": ["Comedy","Sci-Fi"], "year": 1996, "actor": ["Jack Nicholson","Pierce Brosnan","Sarah Jessica Parker"], "title": "Mars Attacks!"}' -H 'Content-Type: application/json'
+
+
+Exercise 2 - bulk
+
+curl -XPOST https://search-elasticsearch-exam-prep-xcpgfere57vj2lnijerxbo7yve.us-east-1.es.amazonaws.com/_bulk --data-binary @bulk_movies.json -H 'Content-Type: application/json'
+
+Exercise 3 - bulk meteors -- NDJSON
+curl -XPOST https://search-elasticsearch-exam-prep-xcpgfere57vj2lnijerxbo7yve.us-east-1.es.amazonaws.com/_bulk --data-binary @testNDJSON_clean.json -H 'Content-Type: application/x-ndjson'
+
